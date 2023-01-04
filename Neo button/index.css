@@ -1,0 +1,821 @@
+
+/* Importing Fonts */
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: myFirstFont2;
+    src: url(fonts/Gotham-Light.otf);
+}
+
+
+/* Colors Schecme */
+:root{
+    --containerBackground:#e9e8e8;
+    --iconBeforeChecked:#7a7a7a;
+    --iconAfterChecked:white;
+    --checkboxBorder:#ececec;
+    --fontColor:#7a7a7a;
+
+    --containerShadowLight:rgba(255,255,255,1);
+    --containerShadowDark:rgba(70,70,70,.2);
+    --containerShadowLightChecked:rgba(255,255,255,0.5);
+    --containerShadowDarkChecked:rgba(70,70,70,0.12);
+
+    --allClose:rgba(235, 5, 5, 0.7);
+    --bulbChecked:rgba(235, 193, 5,0.7);
+    --socketChecked:rgba(15, 233, 73, 0.945);
+    --heavyApplianceChecked:rgba(9, 224, 224, 0.7);
+    --fanRangeSlider:orange;
+
+    --black:black;
+
+}
+
+
+body{
+    background-color: var(--containerBackground);
+    padding:0;      
+    margin:0;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    font-family:myFirstFont;
+    color:var(--fontColor);
+
+}
+
+
+/* Header */
+header{
+    width:400px;
+    display:flex;
+    justify-content:space-between;
+}
+header input[type="checkbox"]{
+    height:50px;
+    width:50px;
+    margin:1rem;
+    -webkit-appearance:none;
+    background-color: var(--containerBackground);
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+    border-radius:10px;
+    outline:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+header input[type="checkbox"]:after{
+    font-family:FontAwesome;
+    content:'\e4d1'; 
+    color:var(--iconBeforeChecked);
+    font-size: 20px;
+}
+header input[type="checkbox"]:checked{
+    box-shadow:-10px -10px 15px var(--containerShadowLightChecked), 
+    10px 10px 15px var(--containerShadowDarkChecked),inset -10px -10px 15px var(--allClose),inset 10px 10px 15px var(--allClose);
+    border:4px solid var(--checkboxBorder);
+}
+header input[type="checkbox"]:checked:after{
+    color:var(--iconAfterChecked);
+}
+header .headerRight{
+    display:flex;
+    align-items:center;
+    margin:1rem;
+}
+header .headerRight .weekday{
+    font-family:myFirstFont2;
+}
+
+
+/* Main */
+.container{
+    width:400px;
+    height:400px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.container1{
+    width:180px;
+    height:180px;
+    background-color: var(--containerBackground);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 10px 10px 15px var(--containerShadowDark);
+    border-radius:1rem;
+    
+}
+.container1 input[type="checkbox"]{
+    height:50px;
+    width:50px;
+    margin:0.5rem;
+    -webkit-appearance:none;
+    background-color: var(--containerBackground);
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+    border-radius:50%;
+    outline:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.container1 input[type="checkbox"]:after{
+    font-family:FontAwesome;
+    content:'\f0eb'; 
+    color:var(--iconBeforeChecked);
+    font-size: 20px;
+}
+.container1 input[type="checkbox"]:checked{
+    box-shadow:-10px -10px 15px var(--containerShadowLightChecked), 
+    10px 10px 15px var(--containerShadowDarkChecked),inset -10px -10px 15px var(--bulbChecked),inset 10px 10px 15px var(--bulbChecked);
+    border:4px solid var(--checkboxBorder);
+}
+.container1 input[type="checkbox"]:checked:after{
+    color:var(--iconAfterChecked);
+}
+
+.container1 input[type="checkbox"]:checked:after{
+    color:var(--iconAfterChecked);
+    animation: heartBeat 2s infinite linear alternate;
+}
+
+/* Container 2 */
+.container2{
+    width:180px;
+    height:180px;
+    background-color: var(--containerBackground);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 10px 10px 15px var(--containerShadowDark);
+    border-radius:1rem;
+}
+.container2 input[type="checkbox"]{
+    height:50px;
+    width:50px;
+    margin:0.5rem;
+    -webkit-appearance:none;
+    background-color: var(--containerBackground);
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+    border-radius:50%;
+    outline:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.container2 input[type="checkbox"]:after{
+    font-family:FontAwesome;
+    content:'\f1e6'; 
+    color:var(--iconBeforeChecked);
+    font-size: 20px;
+}
+.container2 input[type="checkbox"]:checked{
+    box-shadow:-10px -10px 15px var(--containerShadowLightChecked), 
+    10px 10px 15px var(--containerShadowDarkChecked),inset -5px -5px 15px var(--socketChecked),inset 5px 5px 15px var(--socketChecked);
+
+    border:4px solid var(--checkboxBorder);
+}
+
+@keyframes heartBeat{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.15);
+    }
+}
+.container2 input[type="checkbox"]:checked:after{
+    color:var(--iconAfterChecked);
+    animation: heartBeat 2s infinite linear alternate;
+}
+
+
+
+/* Container 3 */
+
+.container3{
+    width:180px;
+    height:180px;
+    border-radius:1rem;
+}
+.container3 .top{
+    width:100%;
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+}
+.container3 .lower{
+    width:100%;
+    height:90px;
+    display:flex;
+    align-items: flex-end;
+}
+.container3 input[type="checkbox"]{
+    height:85px;
+    width:85px;
+    margin:0;
+    -webkit-appearance:none;
+    background-color: var(--containerBackground);
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+    border-radius:1rem;
+    outline:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.container3 .lower input[type="checkbox"]{
+    height:80px;
+    width:100%;
+    margin:0;   
+    -webkit-appearance:none;
+    background-color: var(--containerBackground);
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+    border-radius:15px;
+    outline:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.container3 .upperLeft input[type="checkbox"]:after{
+    font-family:FontAwesome;
+    content:'\f863'; 
+    color:var(--iconBeforeChecked);
+    font-size: 30px;
+    
+}
+.container3 .upperRight input[type="checkbox"]:after{
+    font-family:FontAwesome;
+    content:'\f7d0'; 
+    color:var(--iconBeforeChecked);
+    font-size: 30px;
+}
+.container3 .lower input[type="checkbox"]:after{
+    font-family:FontAwesome;
+    content:'\f72e'; 
+    color:var(--iconBeforeChecked);
+    font-size: 25px;
+}
+.container3 input[type="checkbox"]:checked{
+    box-shadow:-10px -10px 15px var(--containerShadowLightChecked), 
+    10px 10px 15px var(--containerShadowDarkChecked),inset -15px -15px 15px var(--heavyApplianceChecked),inset 15px 15px 15px var(--heavyApplianceChecked);
+    border:4px solid var(--checkboxBorder);
+}
+
+.container3 input[type="checkbox"]:checked:after{
+    color:var(--iconAfterChecked);
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+.container .upperLeft input[type="checkbox"]:checked:after{
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes moving{
+    from{
+        transform: translate(-100%);
+    }
+    to{
+        transform:translate(100%);
+    } 
+}
+.container .lower input[type="checkbox"]:checked:after{
+    animation: moving 2s infinite linear alternate;
+}
+
+@keyframes greet {
+    from {
+      transform: rotate(-30deg);
+    }
+    to {
+      transform: rotate(30deg);
+    }
+}
+.container .upperRight input[type="checkbox"]:checked:after{
+    animation: greet 1s infinite linear alternate;
+}
+/* Container 4 */
+.container4{
+    width:180px;
+    height:180px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 10px 10px 15px var(--containerShadowDark);
+    border-radius:1rem;
+    position:relative;
+}
+.container4 .progressBarDiv{
+    width: 150px;
+    height: 50px;
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+
+}
+.container4 input[type="range"]{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 100%;
+    border-radius:10px;
+    position:relative;
+    outline:none;
+    z-index:3;
+    background:transparent;
+    border:2px solid transparent;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.container4 input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height:70px;
+    width:0px;
+    z-index:2;
+}
+.container4 #progressBar{
+    width:0%;
+    height:50px;
+    background:var(--fanRangeSlider);
+    box-shadow:5px 3px 7px var(--containerShadowDark), inset 5px 5px 7px var(--containerShadowDark);
+    border-radius:10px;
+    position:absolute;
+    top:0;
+    left:0;
+    
+}
+.fanDetails{
+    text-align:left;
+    width:150px;
+}
+.fanDetails .fanSpeed{
+    font-size:2rem;   
+}
+.fanDetails .fanSpeed .value{
+    color:var(--black);
+}
+.fanDetails .fanSpeed .percentSymbol{
+    font-size:1.5rem;
+}
+.fanDetails .fanHeader{
+    font-size:0.9rem;
+    color:var(--iconBeforeChecked);
+}
+
+
+/* Footer */
+
+footer{
+    width:400px;
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+footer .footerLeft{
+    display:flex;
+    align-items:center;
+    margin:1rem;
+}
+footer .footerLeft .date{
+    font-size:40px;
+}
+footer .footerLeft .weekdayAndMonth{
+    display:flex;
+    flex-direction:column;
+    margin-left:5px;
+    font-size:12px;
+}
+
+footer .footerRight{
+    margin:1rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+
+}
+footer .footerRight .dots span{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+footer .footerRight .dots span.first{
+    background-color:red;
+}
+footer .footerRight .dots span.second{
+    background-color:rgb(9, 224, 224);
+}
+footer .footerRight .dots span.third{
+    background-color:orange;
+}
+footer .footerRight .dots span.fourth{
+    background-color:green;
+}
+
+
+/* Logout */
+.logout{
+    width:55px;
+    height:55px;
+    transform:all 1s ease-in-out;
+}
+.logout button{
+    height:55px;
+    width:55px;
+    margin:0;
+    color:var(--iconBeforeChecked);
+    font-size: 20px;
+    -webkit-appearance:none;
+    background-color: var(--containerBackground);
+    box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+    border-radius:50%;
+    outline:none;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border:none;
+    cursor: pointer;
+    transform: all 1s ease-in-out;
+}
+.logout button:hover{
+    /* font-size:23px; */
+    background:rgb(255, 72, 72);
+    color:var(--iconAfterChecked);
+    border:4px solid var(--checkboxBorder);
+}
+
+
+@media screen and (max-width:420px){
+
+    /* Header */
+    header{
+        width:380px;
+    }
+
+    /* Container 1 */
+    .container{
+        width:380px;
+        height:380px;
+    }
+    .container1{
+        width:170px;
+        height:170px;
+    }
+    .container1 input[type="checkbox"]{
+        height:50px;
+        width:50px;
+        margin:0.3rem;
+    }
+
+    /* Container 2 */
+    .container2{
+        width:170px;
+        height:170px;
+    }
+    .container2 input[type="checkbox"]{
+        height:50px;
+        width:50px;
+        margin:0.3rem;
+    }
+
+    /* Container 3 */
+    .container3{
+        width:170px;
+        height:170px;
+    }
+    .container3 .top{
+        height:85px;
+    }
+    .container3 .lower{
+        height:85px;
+    }
+    .container3 input[type="checkbox"]{
+        height:80px;
+        width:80px;
+    }
+    .container3 .lower input[type="checkbox"]{
+        height:75px;
+    }
+    .container3 .upperLeft input[type="checkbox"]:after{
+        font-size: 27px;
+    }
+    .container3 .upperRight input[type="checkbox"]:after{
+        font-size: 27px;
+    }
+    .container3 .lower input[type="checkbox"]:after{
+        font-size: 27px;
+    }
+
+    /* Container 4 */
+    .container4{
+        width:170px;
+        height:170px;
+    }
+    .container4 .progressBarDiv{
+        width: 140px;
+        height: 45px;
+    }
+    .container4 #progressBar{
+        height:45px;   
+    }
+    .fanDetails{
+        text-align:left;
+        width:140px;
+    }
+
+    /* Footer */
+
+    footer{
+        width:380px;
+        height:50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+    }
+}
+
+
+
+@media screen and (max-width:392px){
+
+    /* Header */
+    header{
+        width:350px;
+    }
+
+    /* Container 1 */
+    .container{
+        width:350px;
+        height:350px;
+    }
+    .container1{
+        width:155px;
+        height:155px;
+    }
+    .container1 input[type="checkbox"]{
+        height:45px;
+        width:45px;
+        margin:0.3rem;
+    }
+    .container1 input[type="checkbox"]:after{
+        font-size: 17px;
+    }
+
+    /* Container 2 */
+    .container2{
+        width:155px;
+        height:155px;
+    }
+    .container2 input[type="checkbox"]{
+        height:45px;
+        width:45px;
+        margin:0.3rem;
+    }
+    .container2 input[type="checkbox"]:after{
+        font-size: 17px;
+    }
+
+    /* Container 3 */
+    .container3{
+        width:155px;
+        height:155px;
+    }
+    .container3 .top{
+        height:75px;
+    }
+    .container3 .lower{
+        height:75px;
+    }
+    .container3 input[type="checkbox"]{
+        height:65px;
+        width:65px;
+    }
+    .container3 .lower input[type="checkbox"]{
+        height:65px;
+    }
+    .container3 .upperLeft input[type="checkbox"]:after{
+        font-size: 22px;
+    }
+    .container3 .upperRight input[type="checkbox"]:after{
+        font-size: 22px;
+    }
+    .container3 .lower input[type="checkbox"]:after{
+        font-size: 22px;
+    }
+
+    /* Container 4 */
+    .container4{
+        width:155px;
+        height:155px;
+    }
+    .container4 .progressBarDiv{
+        width: 130px;
+        height: 40px;
+        border-radius:10px;
+        overflow: hidden;
+        box-shadow:-2px -2px 15px var(--containerShadowLight), 7px 7px 10px var(--containerShadowDark);
+
+    }
+    .container4 #progressBar{
+        height:40px;   
+    }
+    .fanDetails{
+        text-align:left;
+        width:130px;
+    }
+
+    /* Footer */
+
+    footer{
+        width:350px;
+        height:50px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+    }
+    footer .footerLeft .date{
+        font-size:35px;
+    }
+    footer .footerLeft .weekdayAndMonth{
+        font-size:.75rem;
+    }
+    
+    footer .footerRight{
+        font-size:.85rem
+    
+    }
+    footer .footerRight .dots span{
+        height: 7px;
+        width: 7px;
+    }
+
+    /* Logout */
+    .logout{
+        width:45px;
+        height:45px;
+    }
+    .logout button{
+        height:45px;
+        width:45px;
+        font-size: 17px;
+    }
+}
+
+
+
+@media screen and (max-width:352px){
+
+    label{
+        font-size:.7rem;
+    }
+    /* Header */
+    header{
+        width:300px;
+    }
+    header input[type="checkbox"]{
+        height:40px;
+        width:40px;
+    }
+    header input[type="checkbox"]:after{
+        font-size: 17px;
+    }
+    header .headerRight{
+        font-size:.8rem;
+    }
+
+    /* Container 1 */
+    .container{
+        width:300px;
+        height:300px;
+    }
+    .container1{
+        width:130px;
+        height:130px;
+    }
+    .container1 input[type="checkbox"]{
+        height:37px;
+        width:37px;
+        margin:0.2rem;
+    }
+    .container1 input[type="checkbox"]:after{
+        font-size: 15px;
+    }
+    .container1 input[type="checkbox"]:checked{
+        border:2px solid var(--checkboxBorder);
+    }
+
+    /* Container 2 */
+    .container2{
+        width:130px;
+        height:130px;
+    }
+    .container2 input[type="checkbox"]{
+        height:37px;
+        width:37px;
+        margin:0.2rem;
+    }
+    .container2 input[type="checkbox"]:after{
+        font-size: 15px;
+    }
+    .container2 input[type="checkbox"]:checked{
+        border:2px solid var(--checkboxBorder);
+    }
+
+    /* Container 3 */
+    .container3{
+        width:130px;
+        height:130px;
+    }
+    .container3 .top{
+        height:65px;
+    }
+    .container3 .lower{
+        height:65px;
+    }
+    .container3 input[type="checkbox"]{
+        height:58px;
+        width:58px;
+    }
+    .container3 .lower input[type="checkbox"]{
+        height:58px;
+    }
+    .container3 .upperLeft input[type="checkbox"]:after{
+        font-size: 20px;
+    }
+    .container3 .upperRight input[type="checkbox"]:after{
+        font-size: 20px;
+    }
+    .container3 .lower input[type="checkbox"]:after{
+        font-size: 20px;
+    }
+
+    /* Container 4 */
+    .container4{
+        width:130px;
+        height:130px;
+    }
+    .container4 .progressBarDiv{
+        width: 110px;
+        height: 37px;
+        border-radius:8px;
+    }
+    .container4 #progressBar{
+        height:37px;   
+    }
+    .fanDetails{
+        width:110px;
+    }
+    .fanDetails .fanSpeed{
+        font-size:1.7rem;   
+    }
+    .fanDetails .fanSpeed .percentSymbol{
+        font-size:1.2rem;
+    }
+    .fanDetails .fanHeader{
+        font-size:0.7rem;
+        color:var(--iconBeforeChecked);
+    }
+
+    /* Footer */
+
+    footer{
+        width:300px;
+
+    }
+    footer .footerLeft .date{
+        font-size:32px;
+    }
+    footer .footerLeft .weekdayAndMonth{
+        font-size:.7rem;
+    }
+    
+    footer .footerRight{
+        font-size:.8rem
+    
+    }
+    footer .footerRight .dots span{
+        height: 7px;
+        width: 7px;
+    }
+}

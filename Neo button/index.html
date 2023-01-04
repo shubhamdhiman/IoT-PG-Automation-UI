@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/b3348ae33f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="headerLeft">
+        <div style="text-align: center">
+          <input type="checkbox" id="light1" />
+          <!-- <label for="light1">All Off</label> -->
+        </div>
+      </div>
+      <div class="headerRight">
+        <span id="weekday" class="weekday"></span>
+        <span>&nbsp;|&nbsp;</span>
+        <span id="month" class="month"></span>
+        <span>&nbsp;</span>
+        <span id="date" class="date"></span>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <div class="container1">
+          <div style="text-align: center">
+            <input type="checkbox" id="light1" />
+            <label for="light1">L1</label>
+          </div>
+          <div style="text-align: center">
+            <input type="checkbox" id="light2" />
+            <label for="light2">L2</label>
+          </div>
+          <div style="text-align: center">
+            <input type="checkbox" id="light3" />
+            <label for="light3">L3</label>
+          </div>
+          <div style="text-align: center">
+            <input type="checkbox" id="light4" />
+            <label for="light4">L4</label>
+          </div>
+        </div>
+
+        <div class="container2">
+          <div style="text-align: center">
+            <input type="checkbox" id="socket1" />
+            <label for="socket1">S1</label>
+          </div>
+          <div style="text-align: center">
+            <input type="checkbox" id="socket2" />
+            <label for="socket2">S2</label>
+          </div>
+          <div style="text-align: center">
+            <input type="checkbox" id="socket3" />
+            <label for="socket3">S3</label>
+          </div>
+          <div style="text-align: center">
+            <input type="checkbox" id="socket4" />
+            <label for="socket4">S4</label>
+          </div>
+        </div>
+
+        <div class="container3">
+          <div class="top">
+            <div style="text-align: center" class="upperLeft">
+              <input type="checkbox" id="socket1" />
+              <!-- <label for="socket1">Cooler</label> -->
+            </div>
+            <div style="text-align: center" class="upperRight">
+              <input type="checkbox" id="socket2" />
+              <!-- <label for="socket2">Freeze</label> -->
+            </div>
+          </div>
+
+          <div class="bottom">
+            <div style="text-align: center" class="lower">
+              <input type="checkbox" id="socket3" />
+              <!-- <label for="socket3">AC</label> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="container4">
+          <div class="progressBarDiv" style="position: relative">
+            <input type="range" min="0" max="100" value="0" id="slider1" />
+            <div id="progressBar"></div>
+          </div>
+          <div class="fanDetails">
+            <div class="fanSpeed">
+              <span class="value" id="speed"></span>
+              <span class="percentSymbol">&nbsp;%</span>
+            </div>
+            <div class="fanHeader">
+              <span>Fan Speed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footerLeft">
+        <div class="date">
+          <span id="date2"></span>
+        </div>
+        <div class="weekdayAndMonth">
+          <div class="weekday" id="weekday2"></div>
+          <div class="month" id="month2"></div>
+        </div>
+      </div>
+      <div class="footerRight">
+        <div class="time">
+          <span id="hour">07</span>
+          <span>:</span>
+          <span id="minute">11</span>
+        </div>
+        <div class="dots">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+          <span class="fourth"></span>
+        </div>
+      </div>
+    </footer>
+    <div class="logout">
+      <button id="btn"><i class="fa-solid fa-power-off"></i></button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
